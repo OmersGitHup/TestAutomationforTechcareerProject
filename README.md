@@ -72,3 +72,12 @@ Test results are visualized using Allure Report. Reports include details on test
 
 - **Ömer Faruk Işık** - Project Creator and Main Contributor  
   [GitHub Profile](https://github.com/OmersGitHub)
+
+## Screenshots
+
+
+![Ekran görüntüsü 2024-07-19 160558](https://github.com/user-attachments/assets/678c1fd2-6018-409e-969d-5cb9f46ec92f)![Ekran görüntüsü 2024-07-19 160629](https://github.com/user-attachments/assets/ae547c40-8044-4aaa-8019-5649841d82f9)
+![Ekran görüntüsü 2024-07-19 164038](https://github.com/user-attachments/assets/b0eef758-e73d-4264-8577-3011f5fc10be)
+![Ekran görüntüsü 2024-07-19 164710](https://github.com/user-attachments/assets/edb1806a-5b87-4c18-b2ba-09b3b451bdf6)
+
+![Ekran görüntüsü 2024-07-19 164716](https://github.com/user-attachments/assets/0eb891e3-b46a-4160-bf3c-e389f32eb977)
