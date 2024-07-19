@@ -1,6 +1,6 @@
 # Test Automation Project
 
-This project is developed to perform automated testing of the [beymen.com](https://beymen.com) website. JUnit and Selenium are used for test automation, and test results are visualized using Allure Report.
+This project is developed as an assignment for Techcareer, specifically for testing the [beymen.com](https://beymen.com) website. JUnit and Selenium are used for test automation, and test results are visualized using Allure Report. The project is supervised by Can Şeker.
 
 ## Table of Contents
 
@@ -10,10 +10,11 @@ This project is developed to perform automated testing of the [beymen.com](https
 - [Tests](#tests)
 - [Results](#results)
 - [Contributors](#contributors)
+- [Screenshots](#screenshots)
 
 ## Project Description
 
-This project is designed to test various functionalities of the [beymen.com](https://beymen.com) website. Functional tests and user scenarios are executed using JUnit and Selenium tools. Detailed test reports are provided using Allure Report.
+This project is designed to test various functionalities of the [beymen.com](https://beymen.com) website. Functional tests and user scenarios are executed using JUnit and Selenium tools. Detailed test reports are provided using Allure Report. This project is an assignment for Techcareer, under the supervision of Can Şeker.
 
 ## Setup
 
