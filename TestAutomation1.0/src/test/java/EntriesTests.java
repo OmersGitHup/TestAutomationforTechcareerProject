@@ -19,7 +19,7 @@ public class EntriesTests extends BaseTest {
 
     @Test(description = "Sign In with Valid Information")
     public  void signUpSuccsessful() throws InterruptedException{
-        baseTest.setDriver();
+        sleep(3000);
         signUpPage
                 .goingSignUp()
                 .fillName(name)
@@ -36,7 +36,6 @@ public class EntriesTests extends BaseTest {
     }
     @Test(description = "Sign In with Null Name ")
     public  void nullName() throws InterruptedException{
-        baseTest.setDriver();
         signUpPage
                 .goingSignUp()
                 .fillName("")
@@ -52,7 +51,6 @@ public class EntriesTests extends BaseTest {
     }
     @Test(description = "Sign In with Null Surname ")
     public  void nullSurname() throws InterruptedException{
-        baseTest.setDriver();
         signUpPage
                 .goingSignUp()
                 .fillName(name)
@@ -65,11 +63,9 @@ public class EntriesTests extends BaseTest {
                 .registerClick()
                 .errorCheck("//*[@id=\"registerForm\"]/div[1]/div[2]/span[2]");
 
-        webDriver.quit();
     }
     @Test(description = "Sign In with Null Email ")
     public  void nullEmail() throws InterruptedException{
-        baseTest.setDriver();
         signUpPage
                 .goingSignUp()
                 .fillName(name)
@@ -81,11 +77,10 @@ public class EntriesTests extends BaseTest {
                 .agreementButton()
                 .registerClick()
                 .errorCheck("//*[@id=\"js-registerScroll\"]/span[2]");
-        webDriver.quit();
+
     }
     @Test(description = "Sign In with Null Password ")
     public  void nullPassword() throws InterruptedException{
-        baseTest.setDriver();
         signUpPage
                 .goingSignUp()
                 .fillName(name)
@@ -97,11 +92,10 @@ public class EntriesTests extends BaseTest {
                 .agreementButton()
                 .registerClick()
                 .shortPasswordErrorMessageCheck("//*[@id=\"registerForm\"]/div[1]/div[7]/span[2]");
-        webDriver.quit();
+
     }
     @Test(description = "Sign In with Short Password ")
     public  void shortPassword() throws InterruptedException{
-        baseTest.setDriver();
         signUpPage
                 .goingSignUp()
                 .fillName(name)
@@ -113,12 +107,10 @@ public class EntriesTests extends BaseTest {
                 .agreementButton()
                 .registerClick()
                 .errorCheck("//*[@id=\"registerForm\"]/div[1]/div[7]/span[2]");
-        webDriver.quit();
+
     }
     @Test(description = "Sign In with Just Numeric Password ")
     public  void numericPassword() throws InterruptedException{
-        baseTest.setDriver();
-
         signUpPage
                 .goingSignUp()
                 .fillName(name)
@@ -131,14 +123,10 @@ public class EntriesTests extends BaseTest {
                 .registerClick()
                 .shortorNumericErrorCheck("//*[@id=\"registerForm\"]/div[1]/div[7]/span[2]");
 
-        webDriver.quit();
     }
     @Test(description = "Sign In with Unclicking Permission ")
     public  void noPermissionAccepting() throws InterruptedException{
         sleep(1000);
-        signUpPage.acceptCookies();
-        baseTest.setDriver();
-
         signUpPage
                 .goingSignUp()
                 .fillName(name)
@@ -149,7 +137,7 @@ public class EntriesTests extends BaseTest {
                 .fillBirthDate("04","03","1999")
                 .registerClick()
                 .errorCheck("//*[@id=\"registerForm\"]/div[3]/div/span");
-        webDriver.quit();
+
     }
 
 

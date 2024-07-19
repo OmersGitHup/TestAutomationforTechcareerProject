@@ -14,14 +14,10 @@ public class SignUpPage extends BaseLibrary {
 
     @Step("Entering Sign Up Panel")
     public SignUpPage goingSignUp() throws InterruptedException{
-
-        webDriver.findElement(By.cssSelector("body > div.o-home > div > div.o-modal.genderPopup > div > div.o-modal__header > button > svg")).click();
-        webDriver.findElement(By.cssSelector("body > header > div > div > div.col.col-xl-3.d-flex.justify-content-end > div > a.o-header__userInfo--item.bwi-account-o.-customer > svg > use")).click();
         sleep(2000);
-        WebElement element = webDriver.findElement(By.xpath("//*[@id=\"onetrust-banner-sdk\"]/div/div"));
-        if (element.isDisplayed())
-            webDriver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]")).click();
-
+        webDriver.findElement(By.cssSelector("body > div.o-home > div > div.o-modal.genderPopup > div > div.o-modal__header > button > svg")).click();
+        webDriver.findElement(By.cssSelector("body > header > div > div > div.col.col-xl-3.d-flex.justify-content-end > div > a.o-header__userInfo--item.bwi-account-o.-customer > svg")).click();
+        sleep(2000);
         webDriver.findElement(By.className("a-borderButton")).click();
         sleep(2000);
         return this;
@@ -103,7 +99,7 @@ public class SignUpPage extends BaseLibrary {
     }
     @Step("Confirm Message Check")
     public SignUpPage confirmCheck() throws InterruptedException{
-        sleep(2000);
+        sleep(3000);
         String value=webDriver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div/div/div/div[2]/div/div/div/ul/li[1]/span[2]")).getText();
 
         Assert.assertEquals("PHONE NUMBER VERIFICATION",value);
