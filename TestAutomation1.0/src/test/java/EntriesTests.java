@@ -2,7 +2,9 @@ import Base.BaseTest;
 import Pages.MainPages;
 import Pages.SignUpPage;
 import org.junit.Assert;
-import org.junit.Test;
+
+import org.testng.annotations.Test;
+import org.junit.runner.Description;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -15,7 +17,7 @@ public class EntriesTests extends BaseTest {
     SignUpPage signUpPage=new SignUpPage();
     BaseTest baseTest=new BaseTest();
 
-    @Test
+    @Test(description = "Sign In with Valid Information")
     public  void signUpSuccsessful() throws InterruptedException{
         baseTest.setDriver();
         signUpPage
@@ -31,7 +33,7 @@ public class EntriesTests extends BaseTest {
                 .confirmCheck();
         webDriver.quit();
     }
-    @Test
+    @Test(description = "Sign In with Null Name ")
     public  void nullName() throws InterruptedException{
         baseTest.setDriver();
         signUpPage
@@ -46,7 +48,7 @@ public class EntriesTests extends BaseTest {
                 .errorCheck("//*[@id=\"registerForm\"]/div[1]/div[1]/span[2]");
         webDriver.quit();
     }
-    @Test
+    @Test(description = "Sign In with Null Surname ")
     public  void nullSurname() throws InterruptedException{
         baseTest.setDriver();
         signUpPage
@@ -62,7 +64,7 @@ public class EntriesTests extends BaseTest {
 
         webDriver.quit();
     }
-    @Test
+    @Test(description = "Sign In with Null Email ")
     public  void nullEmail() throws InterruptedException{
         baseTest.setDriver();
         signUpPage
@@ -77,7 +79,7 @@ public class EntriesTests extends BaseTest {
                 .errorCheck("//*[@id=\"js-registerScroll\"]/span[2]");
         webDriver.quit();
     }
-    @Test
+    @Test(description = "Sign In with Null Password ")
     public  void nullPassword() throws InterruptedException{
         baseTest.setDriver();
         signUpPage
@@ -92,7 +94,7 @@ public class EntriesTests extends BaseTest {
                 .shortPasswordErrorMessageCheck("//*[@id=\"registerForm\"]/div[1]/div[7]/span[2]");
         webDriver.quit();
     }
-    @Test
+    @Test(description = "Sign In with Short Password ")
     public  void shortPassword() throws InterruptedException{
         baseTest.setDriver();
         signUpPage
@@ -107,7 +109,7 @@ public class EntriesTests extends BaseTest {
                 .errorCheck("//*[@id=\"registerForm\"]/div[1]/div[7]/span[2]");
         webDriver.quit();
     }
-    @Test
+    @Test(description = "Sign In with Just Numeric Password ")
     public  void numericPassword() throws InterruptedException{
         baseTest.setDriver();
 
@@ -124,7 +126,7 @@ public class EntriesTests extends BaseTest {
 
         webDriver.quit();
     }
-    @Test
+    @Test(description = "Sign In with Unclicking Permission ")
     public  void noPermissionAccepting() throws InterruptedException{
         baseTest.setDriver();
 
