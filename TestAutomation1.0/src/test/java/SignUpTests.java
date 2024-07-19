@@ -1,21 +1,12 @@
 import Base.BaseTest;
 import Pages.MainPages;
 import Pages.SignUpPage;
-import org.junit.Assert;
 
 import org.testng.annotations.Test;
-import org.junit.runner.Description;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Sleeper;
 
-import java.util.List;
-
-public class EntriesTests extends BaseTest {
+public class SignUpTests extends BaseTest {
     SignUpPage signUpPage=new SignUpPage();
-    BaseTest baseTest=new BaseTest();
+
 
     @Test(description = "Sign In with Valid Information")
     public  void signUpSuccsessful() throws InterruptedException{

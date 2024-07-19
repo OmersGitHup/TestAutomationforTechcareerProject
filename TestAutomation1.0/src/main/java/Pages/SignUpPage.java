@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 public class SignUpPage extends BaseLibrary {
 
 
-    @Step("Entering Sign Up Panel")
+    @Step("Going SignUp Panel")
     public SignUpPage goingSignUp() throws InterruptedException{
         sleep(2000);
         webDriver.findElement(By.cssSelector("body > div.o-home > div > div.o-modal.genderPopup > div > div.o-modal__header > button > svg")).click();

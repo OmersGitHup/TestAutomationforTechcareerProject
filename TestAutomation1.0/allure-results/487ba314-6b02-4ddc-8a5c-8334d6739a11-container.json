@@ -1,0 +1,1 @@
+{"uuid":"487ba314-6b02-4ddc-8a5c-8334d6739a11","name":"Base.BaseTest.closeApp","children":["349767e5-e190-4ec5-ab92-d5775baadfa2"],"description":"","befores":[],"afters":[{"name":"closeApp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1721429826684,"stop":1721429826864}],"start":1721429826684,"stop":1721429826864}
