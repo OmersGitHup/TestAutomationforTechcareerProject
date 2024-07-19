@@ -18,6 +18,10 @@ public class SignUpPage extends BaseLibrary {
         webDriver.findElement(By.cssSelector("body > div.o-home > div > div.o-modal.genderPopup > div > div.o-modal__header > button > svg")).click();
         webDriver.findElement(By.cssSelector("body > header > div > div > div.col.col-xl-3.d-flex.justify-content-end > div > a.o-header__userInfo--item.bwi-account-o.-customer > svg > use")).click();
         sleep(2000);
+        WebElement element = webDriver.findElement(By.xpath("//*[@id=\"onetrust-banner-sdk\"]/div/div"));
+        if (element.isDisplayed())
+            webDriver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]")).click();
+
         webDriver.findElement(By.className("a-borderButton")).click();
         sleep(2000);
         return this;
@@ -25,6 +29,20 @@ public class SignUpPage extends BaseLibrary {
     @Step("Fill Name Blank")
     public SignUpPage fillName(String name) {
         webDriver.findElement(By.xpath("//*[@id=\"name\"]")).sendKeys(name);
+        return this;
+    }
+   @Step("Accept Cookies if it Shown")
+    public SignUpPage acceptCookies(){
+       WebElement element = webDriver.findElement(By.xpath("//*[@id=\"onetrust-banner-sdk\"]/div/div"));
+       if (element.isDisplayed())
+           webDriver.findElement(By.xpath("//*[@id=\"onetrust-accept-btn-handler\"]")).click();
+       return this;
+   }
+    @Step("Accept Notification if it Shown")
+    public SignUpPage acceptNotification(){
+        WebElement element = webDriver.findElement(By.xpath("//*[@id=\"dengage-push-perm-slide\"]/div/div[2]"));
+        if (element.isDisplayed())
+            webDriver.findElement(By.xpath("//*[@id=\"dengage-push-perm-slide\"]/div/div[2]/div[2]/button[2]")).click();
         return this;
     }
     @Step("Fill Surname Blank")

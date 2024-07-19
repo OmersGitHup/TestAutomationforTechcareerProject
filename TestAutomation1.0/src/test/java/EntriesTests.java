@@ -21,6 +21,7 @@ public class EntriesTests extends BaseTest {
     public  void signUpSuccsessful() throws InterruptedException{
         baseTest.setDriver();
         signUpPage
+                .goingSignUp()
                 .fillName(name)
                 .fillSurname(surname)
                 .fillEmail(email)
@@ -31,12 +32,13 @@ public class EntriesTests extends BaseTest {
                 .registerClick()
                 .passingAllow()
                 .confirmCheck();
-        webDriver.quit();
+
     }
     @Test(description = "Sign In with Null Name ")
     public  void nullName() throws InterruptedException{
         baseTest.setDriver();
         signUpPage
+                .goingSignUp()
                 .fillName("")
                 .fillSurname(surname)
                 .fillEmail(email)
@@ -46,12 +48,13 @@ public class EntriesTests extends BaseTest {
                 .agreementButton()
                 .registerClick()
                 .errorCheck("//*[@id=\"registerForm\"]/div[1]/div[1]/span[2]");
-        webDriver.quit();
+
     }
     @Test(description = "Sign In with Null Surname ")
     public  void nullSurname() throws InterruptedException{
         baseTest.setDriver();
         signUpPage
+                .goingSignUp()
                 .fillName(name)
                 .fillSurname("")
                 .fillEmail(email)
@@ -68,6 +71,7 @@ public class EntriesTests extends BaseTest {
     public  void nullEmail() throws InterruptedException{
         baseTest.setDriver();
         signUpPage
+                .goingSignUp()
                 .fillName(name)
                 .fillSurname(surname)
                 .fillEmail("")
@@ -83,6 +87,7 @@ public class EntriesTests extends BaseTest {
     public  void nullPassword() throws InterruptedException{
         baseTest.setDriver();
         signUpPage
+                .goingSignUp()
                 .fillName(name)
                 .fillSurname(surname)
                 .fillEmail(email)
@@ -98,6 +103,7 @@ public class EntriesTests extends BaseTest {
     public  void shortPassword() throws InterruptedException{
         baseTest.setDriver();
         signUpPage
+                .goingSignUp()
                 .fillName(name)
                 .fillSurname(surname)
                 .fillEmail(email)
@@ -114,6 +120,7 @@ public class EntriesTests extends BaseTest {
         baseTest.setDriver();
 
         signUpPage
+                .goingSignUp()
                 .fillName(name)
                 .fillSurname(surname)
                 .fillEmail(email)
@@ -128,9 +135,12 @@ public class EntriesTests extends BaseTest {
     }
     @Test(description = "Sign In with Unclicking Permission ")
     public  void noPermissionAccepting() throws InterruptedException{
+        sleep(1000);
+        signUpPage.acceptCookies();
         baseTest.setDriver();
 
         signUpPage
+                .goingSignUp()
                 .fillName(name)
                 .fillSurname(surname)
                 .fillEmail(email)
