@@ -14,8 +14,7 @@ public class SignUpPage extends BaseLibrary {
 
     @Step("Going SignUp Panel")
     public SignUpPage goingSignUp() throws InterruptedException{
-        sleep(2000);
-        webDriver.findElement(By.cssSelector("body > div.o-home > div > div.o-modal.genderPopup > div > div.o-modal__header > button > svg")).click();
+
         webDriver.findElement(By.cssSelector("body > header > div > div > div.col.col-xl-3.d-flex.justify-content-end > div > a.o-header__userInfo--item.bwi-account-o.-customer > svg")).click();
         sleep(2000);
         webDriver.findElement(By.className("a-borderButton")).click();

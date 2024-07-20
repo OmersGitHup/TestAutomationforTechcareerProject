@@ -14,18 +14,17 @@ public class SignInPage extends BaseLibrary {
     @Step("Going SignIn Page")
     public SignInPage goingSignIn() throws InterruptedException{
         sleep(2000);
-        webDriver.findElement(By.cssSelector("body > div.o-home > div > div.o-modal.genderPopup > div > div.o-modal__header > button > svg")).click();
         webDriver.findElement(By.cssSelector("body > header > div > div > div.col.col-xl-3.d-flex.justify-content-end > div > a.o-header__userInfo--item.bwi-account-o.-customer > svg")).click();
         return this;
     }
 
-    @Step("Filling Valid Mail Address")
+    @Step("Filling Mail Address")
     public SignInPage fillEmail(String email) throws InterruptedException{
         sleep(1000);
         webDriver.findElement(By.id("customerEmail")).sendKeys(email);
         return this;
     }
-    @Step("Filling Valid Password Address")
+    @Step("Filling Password")
     public SignInPage fillPassword(String password) throws InterruptedException{
         webDriver.findElement(By.id("password")).sendKeys(password);
         return this;
@@ -37,7 +36,7 @@ public class SignInPage extends BaseLibrary {
     }
     @Step("Invalid SignIn Information Error")
     public SignInPage errorSignIn() throws InterruptedException{
-        sleep(900);
+        sleep(2000);
         String value=webDriver.findElement(By.xpath("//*[@id=\"notifyMessage\"]")).getText();
 
         Assert.assertEquals("Please check your information and try again.",value);

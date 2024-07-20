@@ -9,4 +9,5 @@ public class Data {
     public static String erroreMessageEmptyBlank="This field cannot be left blank!";
     public static String errorMessageInvalidValue="Please enter a valid password.";
     public static String shortPasswordErrorMessage="Must be at least 6 characters.";
+    public static String orderNoforTracking="AA35MHOT34";
 }
