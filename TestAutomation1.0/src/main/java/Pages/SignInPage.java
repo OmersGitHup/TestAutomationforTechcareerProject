@@ -21,6 +21,7 @@ public class SignInPage extends BaseLibrary {
 
     @Step("Filling Valid Mail Address")
     public SignInPage fillEmail(String email) throws InterruptedException{
+        sleep(1000);
         webDriver.findElement(By.id("customerEmail")).sendKeys(email);
         return this;
     }

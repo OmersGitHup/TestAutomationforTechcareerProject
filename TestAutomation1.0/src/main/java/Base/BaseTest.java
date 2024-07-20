@@ -18,8 +18,8 @@ public class BaseTest extends BaseLibrary {
    }
 
 
-//   @AfterMethod
-//   public void closeApp() {
-//      webDriver.quit();
-//   }
+   @AfterMethod
+   public void closeApp() {
+      webDriver.quit();
+   }
 }

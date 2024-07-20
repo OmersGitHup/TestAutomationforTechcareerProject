@@ -58,4 +58,5 @@ public class SignInTests extends BaseTest {
                 .errorInvalidEmail()
         ;
     }
+
 }
